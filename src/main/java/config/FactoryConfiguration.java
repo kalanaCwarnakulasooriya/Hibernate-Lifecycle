@@ -1,6 +1,6 @@
 package config;
 
-//import entity.Customer;
+import entity.Customer;
 //import entity.Customer;
 //import entity.IDCard;
 import org.hibernate.Session;
@@ -14,7 +14,7 @@ public class FactoryConfiguration {
 
     private FactoryConfiguration() {
         Configuration configuration = new Configuration().configure(); //Eliye thiyana xml file eka thniym hoygena read krl link krnne meya.hibernate boot krnw/snap krnw
-//        configuration.addAnnotatedClass(Customer.class);
+        configuration.addAnnotatedClass(Customer.class);
 //        configuration.addAnnotatedClass(IDCard.class);
         sessionFactory  = configuration.buildSessionFactory();
     }
