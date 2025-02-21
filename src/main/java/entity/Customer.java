@@ -16,6 +16,6 @@ public class Customer {
 //    Auto - hibernate
 //    IDENTITY - auto genarate on database (auto increment)
 //    without - @GeneratedValue you can add custom value
-    private String id;
+    private int id;
     private String name;
 }
