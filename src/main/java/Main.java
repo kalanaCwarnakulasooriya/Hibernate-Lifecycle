@@ -50,8 +50,11 @@ public class Main {
         Customer mergeCustomer = session.merge(customer);
         transaction.commit();
         System.out.println("Merged : " + mergeCustomer.getName());
+        session.close();
 //        ------------------------------------------------------------------------------------------
 
+        session = FactoryConfiguration.getInstance().getSession();
+        transaction = session.beginTransaction();
 //        ** 05. Remove State **
 //        yes session
 //        db yes but commit no db
